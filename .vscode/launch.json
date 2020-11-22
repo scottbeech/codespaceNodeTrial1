@@ -5,9 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "name": "Launch Server using nodemon",
+            "program": "${workspaceFolder}/Server/bin/www",
+            "request": "launch",
+            "restart": true,
+            "runtimeExecutable": "nodemon",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
             "type": "node",
             "request": "launch",
-            "name": "Launch Server",
+            "name": "Launch Server using node",
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -16,7 +29,7 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
+            "name": "Launch Chrome against localhost (run ng serve first)",
             "url": "http://localhost:4200",
             "sourceMaps": true,
             "webRoot": "${workspaceFolder}/AngularApp",
